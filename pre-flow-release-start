@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# Runs before git flow hotfix finish
+# Runs before git flow release start
 #
 # Positional arguments:
 # $1    The version (including the version prefix)
 # $2    The origin remote
-# $3    The full branch name (including the feature prefix)
+# $3    The full branch name (including the release prefix)
+# $4    The base from which this release is started
 #
 # The following variables are available as they are exported by git-flow:
 #
@@ -15,10 +16,10 @@
 VERSION=$1
 ORIGIN=$2
 BRANCH=$3
+BASE=$4
 
 # Implement your script here.
-grunt build:production
-git commit -am "bump version"
+bumpversion -p -s
 
 # To terminate the git-flow action, return a non-zero exit code.
 exit 0
