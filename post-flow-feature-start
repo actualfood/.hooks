@@ -19,7 +19,7 @@ BRANCH=$3
 BASE=$4
 
 # Implement your script here.
-bumpversion -p -lc 2
+bumpversion -lc 2
 
 # To terminate the git-flow action, return a non-zero exit code.
 exit 0
