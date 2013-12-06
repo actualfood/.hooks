@@ -18,7 +18,7 @@ BRANCH=$3
 
 # Implement your script here.
 bumpversion -p -s
-grunt build
+grunt production
 git commit -am "bump version"
 
 # To terminate the git-flow action, return a non-zero exit code.
