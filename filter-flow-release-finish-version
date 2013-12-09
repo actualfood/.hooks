@@ -18,6 +18,7 @@
 # VERSION=$1
 VERSION=`grep version package.json| sed s/\"//g| sed s/version://g| sed s/-BUILD-NUMBER//g| tr -d ' '| tr -d ','`
 
+
 # Return the VERSION
 echo ${VERSION}
 exit 0
